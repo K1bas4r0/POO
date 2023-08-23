@@ -63,13 +63,9 @@ function decoder(menssage){
         return decodeMessage.join('')
 }
 
-const mess = prompt('dame un mensaje en letras: ')
-
-console.log(encoder('hola como estamos?'));
-console.log(decoder('....  ---  .-..  .-  /  -.-.  ---  --  ---  /  .  ...  -  .-  --  ---  ...'));
-
-
-console.log(encoder(mess));
+const cond = prompt('Escribe "1" para traducir de texto a morse y "2" para morse a texto (1/2): ')
+cond === '1'? console.log(encoder(prompt('dame un mensaje en letras: '))): 
+console.log(decoder(prompt('dame un mensaje en morse, por favor separa cad letra con un " "y cada palabra con "/": ')));
 
 /*code = {
         a: '.-',      b: '-...',    c: '-.-.',    d: '-..',
