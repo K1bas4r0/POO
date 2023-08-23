@@ -1,4 +1,4 @@
-
+const prompt = require("prompt-sync")({ sigint: true });
 
 const enmap = {
         a: '.-',      b: '-...',    c: '-.-.',    d: '-..',
@@ -63,8 +63,13 @@ function decoder(menssage){
         return decodeMessage.join('')
 }
 
+const mess = prompt('dame un mensaje en letras: ')
+
 console.log(encoder('hola como estamos?'));
 console.log(decoder('....  ---  .-..  .-  /  -.-.  ---  --  ---  /  .  ...  -  .-  --  ---  ...'));
+
+
+console.log(encoder(mess));
 
 /*code = {
         a: '.-',      b: '-...',    c: '-.-.',    d: '-..',
